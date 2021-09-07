@@ -1,10 +1,32 @@
 <mvc:View  controllerName="alfa03.sapui5.controller.App"
-           xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+           xmlns="sap.m" 
+           xmlns:mvc="sap.ui.core.mvc"
+           displayBlock="true">
 
-    <Button text="{i18n>showHelloButtonText}" press=".onShowHello"></Button>
+    <Shell>
+        <App>
+            <pages>
+                <Page title="{i18n>appTitle}">
+                    <content>
+                        <Panel headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto">
+                            <content>
+                               
+                                <Button text="{i18n>showHelloButtonText}" 
+                                        press=".onShowHello" 
+                                        class="sapUiSmallMarginEnd"/>
+                                
+                                <Input value="{/recipient/name}"
+                                        valueLiveUpdate="true"
+                                        width="60%"/> 
 
-    <Input  value="{/recipient/name}"
-            description="hello {/recipient/name}"
-            valueLiveUpdate="true"
-            width="60%"> </Input>
+                                <Text text="Hello {/recipient/name}"
+                                        class="sapUiSmallMargin boldElments sapthemeHighlight-asColor"/>
+
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
