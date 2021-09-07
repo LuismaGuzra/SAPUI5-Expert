@@ -1,0 +1,38 @@
+sap.ui.define([
+    "sap/ui/core/UIComponent",
+      "alfa03/sapui5/model/Models",
+    "sap/ui/model/resource/ResourceModel"
+],
+    /**
+     * 	* @param {typeof sap.ui.core.UIComponent} UIComponent
+     */
+    function (UIComponent, Models, ResourceModel) {
+        'use strict';
+
+        return UIComponent.extend("alfa03.sapui5.Component", {
+            
+            metadata: {
+                manifest : "json"
+
+              //  "rootView": {
+              //      "viewName" : "alfa03.sapui5.view.App",
+              //      "type" : "XML",
+              //      "async" : true,
+              //      "id" : "app"
+              //  }
+            },
+
+            init: function () {
+                //call the init function of the parent
+                UIComponent.prototype.init.apply(this, arguments);
+
+                // set data model on the view 
+                this.setModel(Models.createRecipient());
+               
+                // set 118n odel on te view .
+                var i18nModel = new ResourceModel( {bundleName : "alfa03.sapui5.i18n.i18n"});
+                this.setModel(i18nModel, "i18n");
+            }
+        });
+
+    });
