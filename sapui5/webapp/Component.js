@@ -1,12 +1,13 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
       "alfa03/sapui5/model/Models",
-    "sap/ui/model/resource/ResourceModel"
+    "sap/ui/model/resource/ResourceModel",
+    "./controller/HelloDialog"
 ],
     /**
      * 	* @param {typeof sap.ui.core.UIComponent} UIComponent
      */
-    function (UIComponent, Models, ResourceModel) {
+    function (UIComponent, Models, ResourceModel, HelloDialog) {
         'use strict';
 
         return UIComponent.extend("alfa03.sapui5.Component", {
@@ -32,6 +33,18 @@ sap.ui.define([
                 // set 118n odel on te view .
                 var i18nModel = new ResourceModel( {bundleName : "alfa03.sapui5.i18n.i18n"});
                 this.setModel(i18nModel, "i18n");
+
+                this._HelloDialog = new HelloDialog(this.getRootControl());
+
+            },
+
+            exit: function(){
+                this._HelloDialog.destroy();
+                delete this._HelloDialog;
+            },
+
+            openHelloDialog: function(){
+                this._HelloDialog.open();
             }
         });
 
