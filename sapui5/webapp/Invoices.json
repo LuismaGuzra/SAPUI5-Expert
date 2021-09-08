@@ -1,0 +1,59 @@
+{
+    "Invoices": [
+        {
+            "ProductName": "HDD-samsung 250gb",
+            "Quantity": 21,
+            "ExtendedPrice": 87.2000,
+            "Shippernane": "Fun inc.",
+            "ShipperDate": "2015-04-01T00:00:00",
+            "Status": "A"
+        },
+
+        {
+            "ProductName": "Display dell um850 4K 27",
+            "Quantity": 4,
+            "ExtendedPrice": 9.999999,
+            "Shippernane": "Acme",
+            "ShipperDate": "2015-02-01T00:00:00",
+            "Status": "B"
+        },
+
+        {
+            "ProductName": "RAM PX DDR4 PC4-2400 16GB",
+            "Quantity": 3,
+            "ExtendedPrice": 6.999999,
+            "Shippernane": "Acme",
+            "ShipperDate": "2015-02-01T00:00:00",
+            "Status": "B"
+        },
+
+           {
+            "ProductName": "HDD-Kingston 64gb",
+            "Quantity": 4,
+            "ExtendedPrice": 82.2000,
+            "Shippernane": "Fun inc.",
+            "ShipperDate": "2015-04-01T00:00:00",
+            "Status": "B"
+        },
+
+        {
+            "ProductName": "Display LG-4K 19",
+            "Quantity": 2,
+            "ExtendedPrice": 9.999999,
+            "Shippernane": "Acme",
+            "ShipperDate": "2015-02-01T00:00:00",
+            "Status": "C"
+        },
+
+        {
+            "ProductName": "RAM PX DDR3 PC4-2400 4GB",
+            "Quantity": 4,
+            "ExtendedPrice": 5.999999,
+            "Shippernane": "Acme",
+            "ShipperDate": "2015-02-01T00:00:00",
+            "Status": "B"
+        }
+
+
+    ]
+}
